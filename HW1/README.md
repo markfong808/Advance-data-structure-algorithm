@@ -1,19 +1,3 @@
 # css343-tszhaf
 
-sample out 1:
-The first shuffled output is:
-
-+ - - - - - - - +
-|   8   7   1   | 
-|   4   3   6   | 
-|   2   9   5   | 
-+ - - - - - - - +
-
-smaple output 2:
-The second shuffled output is:
-
-+ - - - - - - - +
-|   4   2   3   | 
-|   7   5   9   | 
-|   1   6   8   | 
-+ - - - - - - - +
+<img width="870" alt="result" src="https://github.com/markfong808/css343-tszhaf/assets/129460108/7ec16a44-17ab-435e-8653-bb6be3dc7db1">
