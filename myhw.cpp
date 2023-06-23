@@ -12,16 +12,18 @@ class Shuffle
 {
 private:
   vector<int> nums;
-  static int counter; // Counter to keep track of shuffle number
+  // As a static variable, counter is shared among all instances of the Shuffle class. It means that all objects of the class will have access to and modify the same counter variable. This ensures that the shuffle number is incremented
+  // Counter to keep track of shuffle number
+  static int counter;
 
 public:
   friend ostream &operator<<(ostream &out, const Shuffle &shuffle);
 
-  Shuffle()
+  Shuffle(const string &digits)
   {
-    for (int i = 1; i <= 9; i++)
+    for (int i = 0; i < digits.length(); i++)
     {
-      nums.push_back(i);
+      nums.push_back(digits[i] - '0');
     }
 
     // Fisher-Yates Shuffle
@@ -66,6 +68,14 @@ ostream &operator<<(ostream &out, const Shuffle &shuffle)
 
 int main(int argc, char **argv)
 {
+  string digits;
+  cout << "Please input 9 digits to be randomly shuffled: ";
+  cin >> digits;
+  
+  if(digits.length() != 9){
+    cout << "Invalid input. Please provide exactly 9 digits." << endl;
+  }
+  
   if (argc < 2)
   {
     cout << "Usage: ./myhw <num_times>" << endl;
@@ -78,7 +88,7 @@ int main(int argc, char **argv)
 
   for (int i = 0; i < numTimes; i++)
   {
-    Shuffle b;
+    Shuffle b(digits);
     cout << b << endl;
   }
   return 0;
