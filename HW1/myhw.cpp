@@ -89,6 +89,9 @@ int main(int argc, char **argv)
   // argv[0] = ./myhw  , argv[1] = whatever integer user input
   int numTimes = atoi(argv[1]);
 
+  // Seed the random number generator
+  srand(static_cast<unsigned int>(time(0)));
+
   for (int i = 0; i < numTimes; i++)
   {
     Shuffle b(digits);
